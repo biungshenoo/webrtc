@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/biungshenoo/gum-master" added="2020-02-18T06:07:23Z" modified="2020-02-18T06:07:23Z" visited="2020-02-18T06:07:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus %u&apos;" modified="2020-02-18T06:07:23Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/biungshenoo/public/webrtc.js" added="2020-02-18T08:27:09Z" modified="2020-02-18T15:08:20Z" visited="2020-02-18T08:27:09Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/javascript"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;gedit %U&apos;" modified="2020-02-18T15:08:20Z" count="10"/>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2020-02-18T15:07:59Z" count="41"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/biungshenoo/server.js" added="2020-02-18T12:35:22Z" modified="2020-02-18T14:52:45Z" visited="2020-02-18T12:35:22Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/javascript"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2020-02-18T14:52:45Z" count="16"/>
+          <bookmark:application name="nautilus" exec="&apos;gedit %U&apos;" modified="2020-02-18T14:15:38Z" count="8"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/biungshenoo/index.html" added="2020-02-18T12:44:53Z" modified="2020-02-18T14:19:22Z" visited="2020-02-18T12:44:53Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;gedit %U&apos;" modified="2020-02-18T14:18:47Z" count="5"/>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2020-02-18T14:19:22Z" count="12"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/biungshenoo/master.zip" added="2020-02-18T16:06:31Z" modified="2020-02-18T16:06:31Z" visited="2020-02-18T16:06:31Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;file-roller %U&apos;" modified="2020-02-18T16:06:31Z" count="1"/>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2020-02-18T16:06:31Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

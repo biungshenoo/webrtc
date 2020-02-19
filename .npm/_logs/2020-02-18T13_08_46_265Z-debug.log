@@ -1,0 +1,35 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'start' ]
+2 info using npm@6.13.6
+3 info using node@v13.8.0
+4 verbose config Skipping project config: /home/biungshenoo/.npmrc. (matches userconfig)
+5 verbose run-script [ 'prestart', 'start', 'poststart' ]
+6 info lifecycle project1@1.0.0~prestart: project1@1.0.0
+7 info lifecycle project1@1.0.0~start: project1@1.0.0
+8 verbose lifecycle project1@1.0.0~start: unsafe-perm in lifecycle true
+9 verbose lifecycle project1@1.0.0~start: PATH: /usr/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/home/biungshenoo/node_modules/.bin:/home/biungshenoo/bin:/home/biungshenoo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+10 verbose lifecycle project1@1.0.0~start: CWD: /home/biungshenoo
+11 silly lifecycle project1@1.0.0~start: Args: [ '-c', 'node server.js' ]
+12 silly lifecycle project1@1.0.0~start: Returned: code: 1  signal: null
+13 info lifecycle project1@1.0.0~start: Failed to exec start script
+14 verbose stack Error: project1@1.0.0 start: `node server.js`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-lifecycle/index.js:332:16)
+14 verbose stack     at EventEmitter.emit (events.js:321:20)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-lifecycle/lib/spawn.js:55:14)
+14 verbose stack     at ChildProcess.emit (events.js:321:20)
+14 verbose stack     at maybeClose (internal/child_process.js:1026:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:286:5)
+15 verbose pkgid project1@1.0.0
+16 verbose cwd /home/biungshenoo
+17 verbose Linux 4.15.0-29-generic
+18 verbose argv "/usr/bin/node" "/usr/bin/npm" "start"
+19 verbose node v13.8.0
+20 verbose npm  v6.13.6
+21 error code ELIFECYCLE
+22 error errno 1
+23 error project1@1.0.0 start: `node server.js`
+23 error Exit status 1
+24 error Failed at the project1@1.0.0 start script.
+24 error This is probably not a problem with npm. There is likely additional logging output above.
+25 verbose exit [ 1, true ]
