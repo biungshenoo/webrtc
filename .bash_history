@@ -8,3 +8,8 @@ suodu su
 sudu su
 sudo su
 ls
+sudo su
+reboot
+sudo su
+reboot
+sudo su

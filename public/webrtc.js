@@ -14,21 +14,27 @@ var sendmsgButton;
 var msgArea;
 var localStream;
 var isInitiator = false;
+var remoteCandidatesDrained = false;
+var remoteCandidatesArray = [];
+var streamId = 0;
+var RemoteStream;
+
 
 // Put variables in global scope to make them available to the browser console.
 const constraints = window.constraints = {
-  audio: false,
+  audio: true,
   video: true
 };
 
 function handleSuccess(stream) {
-  const video = document.querySelector('video');
+  const video = document.querySelector('#gum-local');
   const videoTracks = stream.getVideoTracks();
   console.log('Got stream with constraints:', constraints);
   console.log(`Using video device: ${videoTracks[0].label}`);
   window.stream = stream; // make variable available to browser console
   video.srcObject = stream;
   localStream = stream;
+  
   if(isInitiator == true)
   {
        createPeerConnection(stream);
@@ -126,8 +132,20 @@ function onWebSocketMessage(evt) {
         if(type == "offer"){
         setupIncomingCall(response.webrtc.sdp);
        }
-        else if(type == "answer"){}
-        else if(type == "icecandidate"){} 
+        else if(type == "answer"){
+        pc.setRemoteDescription(new RTCSessionDescription({type: 'answer', sdp: response.webrtc.sdp}));
+       }
+        else if(type == "candidate"){
+         console.log('Adding ice candidate: ' + response.webrtc.candidate);
+              pc.addIceCandidate(new RTCIceCandidate(
+                {
+                  sdpMid: response.webrtc.id,
+                  sdpMLineIndex: response.webrtc.label,
+                  type: 'candidate',
+                  candidate: response.webrtc.candidate
+                })
+              );
+       } 
         console.log("webrtc is"+response.webrtc );
     break;
     }
@@ -184,11 +202,13 @@ function createPeerConnection(stream) {
       pc.addStream(localStream);
       pc.onicecandidate = function (evnt) {
         console.log("onicecandidate: " + evnt.candidate);
- //       sendIceCandidate(evnt.candidate);
+        sendIceCandidate(evnt.candidate);
 
       };
       pc.onaddstream = function (evnt) {
         console.log('Received new stream');
+      const remotevideo = document.querySelector('#remoteVideo');
+      remotevideo.srcObject = evnt.stream;
       };
       pc.onsignalingstatechange = function() {
         if (!pc) {
@@ -254,7 +274,7 @@ function sendOffer(offer_) {
           .then(function() {
             console.log('setLocalDescription succeeds');
             sendAnswer(sessionDescription.sdp);
-    //        drainRemoteCandidates();
+            drainRemoteCandidates();
           })
           .catch(function(err) {
             console.log('setLocalDescription error: ' + err);
@@ -269,8 +289,8 @@ function sendOffer(offer_) {
       });
     }
 
-   function sendAnswerAt() {
-      if (!isInitiator) {
+   function sendAnswer(answer_) {
+      if (isInitiator) {
         return;
       }
       var msg = {
@@ -280,6 +300,34 @@ function sendOffer(offer_) {
             sdp : answer_
         }
       };
+      console.log(JSON.stringify(msg));
       webSocket.send(JSON.stringify(msg));
     }
+
+function sendIceCandidate(candidate_) {
+      if (!candidate_) {
+        return;
+      }
+      var msg = {
+        'msg_type': 'webrtc',
+        'webrtc': {
+          'type': 'candidate',
+          'label': candidate_.sdpMLineIndex,
+          'id': candidate_.sdpMid,
+          'candidate': candidate_.candidate,
+       }
+      };
+      console.log(JSON.stringify(msg));
+      webSocket.send(JSON.stringify(msg));
+    }
+
+function drainRemoteCandidates() {
+      // drain the candidates
+      for (var i = 0, len = remoteCandidatesArray.length; i < len; i++) {
+        pc.addIceCandidate(remoteCandidatesArray[i]);
+      }
+      remoteCandidatesArray = []
+      remoteCandidatesDrained = true;
+    }
+
 document.querySelector('#showVideo').addEventListener('click', e => init(e));

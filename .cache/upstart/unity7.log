@@ -1,6 +1,16 @@
-WARN  2020-02-19 11:02:50 unity.shell.compiz unityshell.cpp:3271 Animation plugin not found. Can't set minimize speed.
-ERROR 2020-02-19 11:08:40 nux.gestures_subscription GesturesSubscription.cpp:93 Failed to deactivate Geis subscription.
-ERROR 2020-02-19 11:08:40 nux.gestures_subscription GesturesSubscription.cpp:93 Failed to deactivate Geis subscription.
-ERROR 2020-02-19 11:08:40 nux.gestures_subscription GesturesSubscription.cpp:93 Failed to deactivate Geis subscription.
-WARN  2020-02-19 11:08:40 nux.inputmethod.ibus InputMethodIBus.cpp:67 Impossible to connect to connect to ibus
-WARN  2020-02-19 11:08:40 unity.glib.dbus.proxy GLibDBusProxy.cpp:487 Calling method "SyncOne" on object path: "/com/canonical/Unity/Panel/Service" failed: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name com.canonical.Unity.Panel.Service.LockScreen was not provided by any .service files
+ERROR 2020-02-24 19:57:59 nux.gestures_subscription GesturesSubscription.cpp:93 Failed to deactivate Geis subscription.
+ERROR 2020-02-24 19:57:59 nux.gestures_subscription GesturesSubscription.cpp:93 Failed to deactivate Geis subscription.
+ERROR 2020-02-24 19:57:59 nux.gestures_subscription GesturesSubscription.cpp:93 Failed to deactivate Geis subscription.
+WARN  2020-02-24 19:58:00 nux.inputmethod.ibus InputMethodIBus.cpp:67 Impossible to connect to connect to ibus
+
+(nautilus:2380): GLib-GIO-CRITICAL **: g_dbus_interface_skeleton_unexport: assertion 'interface_->priv->connections != NULL' failed
+
+(nautilus:2380): GLib-GIO-CRITICAL **: g_dbus_interface_skeleton_unexport: assertion 'interface_->priv->connections != NULL' failed
+
+(nautilus:2380): Gtk-CRITICAL **: gtk_icon_theme_get_for_screen: assertion 'GDK_IS_SCREEN (screen)' failed
+
+(nautilus:2380): GLib-GObject-WARNING **: invalid (NULL) pointer instance
+
+(nautilus:2380): GLib-GObject-CRITICAL **: g_signal_connect_object: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+WARN  2020-02-24 21:04:17 nux.inputmethod.ibus InputMethodIBus.cpp:67 Impossible to connect to connect to ibus
+WARN  2020-02-24 21:04:18 unity.glib.dbus.proxy GLibDBusProxy.cpp:487 Calling method "SyncOne" on object path: "/com/canonical/Unity/Panel/Service" failed: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name com.canonical.Unity.Panel.Service.LockScreen was not provided by any .service files

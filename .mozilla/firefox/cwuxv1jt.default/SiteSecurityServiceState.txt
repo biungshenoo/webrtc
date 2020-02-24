@@ -1,0 +1,3 @@
+search.services.mozilla.com:HSTS	0	18314	1613916027507,1,0,2
+location.services.mozilla.com:HSTS	0	18314	1613916013716,1,1,2
+aus5.mozilla.org:HSTS	0	18314	1613916024676,1,0,2

@@ -2,22 +2,3 @@ VBoxClient: error: No service specified. Quitting because nothing to do!
 openConnection: connect: 没有那个文件或目录
 cannot connect to brltty at :0
 VBoxClient: error: No service specified. Quitting because nothing to do!
-upstart: window-stack-bridge main 进程 (1598)已经被HUP 信号杀死
-upstart: bamfdaemon main 进程 (1639)已经被TERM 信号杀死
-upstart: unity-settings-daemon main 进程 (1726)已经被HUP 信号杀死
-upstart: hud main 进程 (1724)已经被HUP 信号杀死
-upstart: unity-panel-service main 进程 (1744)已经被HUP 信号杀死
-upstart: indicator-messages main 进程 (1795)已经被HUP 信号杀死
-upstart: indicator-bluetooth main 进程 (1799)已经被TERM 信号杀死
-upstart: indicator-power main 进程 (1805)已经被TERM 信号杀死
-upstart: indicator-keyboard main 进程 (1810)已经被HUP 信号杀死
-upstart: indicator-sound main 进程 (1811)已经被HUP 信号杀死
-upstart: indicator-session main 进程 (1821)已经被TERM 信号杀死
-upstart: indicator-application main 进程 (1829)已经被TERM 信号杀死
-upstart: indicator-application pre-stop 进程 (6358)已经被TERM 信号杀死
-upstart: gnome-session (Unity) pre-stop 进程 (6359)已经被HUP 信号杀死
-upstart: gnome-session (Unity) main 进程 (1737)已经被HUP 信号杀死
-upstart: indicator-datetime main 进程 (1809)已经被TERM 信号杀死
-upstart: indicator-printers main 进程 (1816)已经被TERM 信号杀死
-upstart: 从告知的D-Bus总线断开
-upstart: unity7 main 进程 (1870)以状态 1 结束
