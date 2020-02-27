@@ -120,7 +120,27 @@ function onWebSocketMessage(evt) {
         roomNumber = response.room_number;
         console.log("room is:" + roomNumber);
         DisplayAndHiddenBtn("getRoom", "h");
+        navigator.mediaDevices.getUserMedia(constraints).then(function(s) {
+            console.log("getUserMedia succeeds");
+            handleSuccess(s);
+        }).catch(function(err) {
+        console.log("getUserMedia fails");
+            handleError(err);
+        });
+        DisplayAndHiddenBtn("showVideo", "h");
     break;
+    case "join_room":
+        roomNumber = response.room_number;
+        console.log("room is:" + roomNumber);
+        DisplayAndHiddenBtn("getRoom", "h");
+        navigator.mediaDevices.getUserMedia(constraints).then(function(s) {
+            console.log("getUserMedia succeeds");
+            handleSuccess(s);
+        }).catch(function(err) {
+        console.log("getUserMedia fails");
+            handleError(err);
+        });
+        DisplayAndHiddenBtn("showVideo", "h");
     case "message":
         var msg = response.msg;
         writeToScreen('<span style="color: blue;">RESPONSE: ' + msg +'</span>');
@@ -182,7 +202,13 @@ function onLoad() {
         console.log("room number is:" + roomNumber);
         getRoomButton.innerText = "Join Room " + roomNumber;
         isInitiator = true;
+        joinRoom(roomNumber);
+  
     }
+    else if(isInitiator != true){
+         createWebSocket();
+
+}
 }
 
  function writeToScreen(message)

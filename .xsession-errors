@@ -2,3 +2,4 @@ VBoxClient: error: No service specified. Quitting because nothing to do!
 openConnection: connect: 没有那个文件或目录
 cannot connect to brltty at :0
 VBoxClient: error: No service specified. Quitting because nothing to do!
+upstart: update-notifier-crash (/var/crash/_usr_bin_node.0.crash) main 进程 (1712)以状态 1 结束

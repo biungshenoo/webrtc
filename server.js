@@ -89,6 +89,7 @@ function onWebSocketMessage(ws, message) {
          sockets[0].peer = ws;
          ws.peer = sockets[0];
          sockets.push(ws);
+         ws.send(JSON.stringify(msg));
      break;
      case 'message':
          var room = msg.room_number;
